@@ -89,14 +89,97 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+  padding-top: 56px;
+}
 
+#header {
+  background: #0f6674;
+}
 
+#header .logo-head a {
+  margin-left: 200px;
+  font-size: 26px;
+  color: #fff;
+  text-decoration: none;
+}
 
+.nav-item-head {
+  margin-right: 10%;
+}
 
+.header-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 420px;
+  background: linear-gradient(133deg, #72d2b9, #729ed2, #7d72d2, #9850b9, #ad85bf, #bda4c8, #d45b9f, #bc7cd9, #e866aa, #55c2d4, #d96c88);
+  background-size: 2200% 2200%;
+  -webkit-animation: AnimationName 57s ease infinite;
+  -moz-animation: AnimationName 57s ease infinite;
+  -o-animation: AnimationName 57s ease infinite;
+  animation: AnimationName 57s ease infinite;
+}
 
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 4%}
+  50%{background-position:100% 97%}
+  100%{background-position:0% 4%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 4%}
+  50%{background-position:100% 97%}
+  100%{background-position:0% 4%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:0% 4%}
+  50%{background-position:100% 97%}
+  100%{background-position:0% 4%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 4%}
+  50%{background-position:100% 97%}
+  100%{background-position:0% 4%}
+}
 
+.header-card-logo {
+  display: flex;
+  justify-content: center;
+}
 
+.header-card-logo a {
+  display: flex;
+  color: #fff;
+  font-size: 30px;
+  text-decoration: none;
+}
 
+.registration {
+  display: flex;
+  justify-content: center;
+}
+
+.registration button {
+  background: #17a2b8;
+  border: 6px solid #17a2b8;
+  border-radius: 5px;
+  cursor: pointer;
+  color: aliceblue;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.soc-net {
+  display: flex;
+  justify-content: center;
+}
+
+.soc-net a {
+  margin: 10px;
+  text-decoration: none;
+  color: #fff;
+}
 
 
 
