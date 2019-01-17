@@ -12,14 +12,16 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
   <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="././css/font-awesome.min.css">
 </head>
 
-<body>
+<body data-target="#collapsibleNavbar" data-spy="scroll" data-offset="1">
 
   <nav id="header" class="navbar navbar-expand-sm bg-head navbar-dark fixed-top">
     <div class="row logo-head">
       <div class="col">
-        <a class="nav-bar-head" href="#head"><strong>Follo</strong> flow</a>
+        <a class="nav-bar-head" href="#head"><strong>Follo</strong>flow</a>
       </div>
     </div>
     <div class="row">
@@ -36,36 +38,116 @@
     <nav class="collapse navbar-collapse justify-content-end nav-item-head" id="collapsibleNavbar" role="navigation">
       <ul class="nav col-md-6 navbar-nav justify-content-end ">
         <li class="nav-item item-head">
-          <a class="nav-link" href="#about">О сервисе</a>
+          <a class="nav-link" href="#about">About</a>
         </li>
         <li class="nav-item item-head">
-          <a class="nav-link" href="#howworking">Факты</a>
+          <a class="nav-link" href="#howworking">How start</a>
         </li>
         <li class="nav-item item-head">
-          <a class="nav-link" href="#reg">Регистрация</a>
+          <a class="nav-link" href="#reg">Registration</a>
         </li>
       </ul>
     </nav>
   </nav>
 
   <header>
-    <div class="header-card">
+    <div class="header-card" id="header-card">
       <div class="row">
         <div class="col">
           <div class="header-card-logo">
             <a href="#">Folloflow</a>
           </div>
-        </div>
-        <div class="col-md-12">
-          <div class="registration">
-            <button class="registration-button">Регистрация</button>
+          <div class="header-card-logo">
+            <p>Boost your Instagram account / Automate your routine actions in Instagram.</p>
           </div>
         </div>
-        <div class="col-md-12">
-          <div class="soc-net">
-              <a href="">VK</a>
-              <a href="">Instagram</a>
-              <a href="">FaceBook</a>
+        <div class="col-md-12" style="justify-content: center; display: flex;">
+          <div class="col-md-4 row">
+            <div class="col-md-6">
+              <div class="sign-in">
+                <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><button class="registration-button" data-toggle="modal" data-target="#myModal">Boost</button></a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="registration">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><button  class="registration-button" data-toggle="modal" data-target="#myModal">Automate</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Sign in</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Registration</a>
+              </li>
+            </ul>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <form class="form-login col-md-12" id="form-login">
+                  <div class="row">
+                    <label class="col-md-6">
+                      <input id="login-email" name="email" type="email" required="required" placeholder="Email">
+                    </label>
+                    <br>
+                    <label class="col-md-6">
+                      <input id="pass" name="pass" type="password" required="required" placeholder="Password">
+                    </label>
+                    <label class="col-md-12">
+                      <button type="submit" name="login">Sign in</button>
+                    </label>
+                  </div>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <form class="form-reg-modal col-md-12" action="register.php" method="post" name="form_reg">
+                  <div class="row">
+                    <label class="col-md-6">
+                      <input type="text" name="first_name" required="required" placeholder="Имя">
+                    </label>
+                    <br>
+                    <label class="col-md-6">
+                      <input id="email" type="email" name="email" required="required" placeholder="Email">
+                      <span id="valid_email_message" class="mesage_error"></span>
+                    </label>
+                    <br>
+                    <label class="col-md-6">
+                      <input type="password" name="password" placeholder="Пароль" required="required"><br>
+                      <span id="valid_password_message" class="mesage_error"></span>
+                    </label>
+                    <br>
+                    <label class="col-md-6">
+                      <input type="password" name="password2" placeholder="Пароль еще раз" required="required"><br>
+                      <span id="valid_password_message" class="mesage_error"></span>
+                    </label>
+                    <br>
+                    <label class="col-md-12">
+                      <!--<img src="captcha.php" alt="Капча" /> <br><br>-->
+                      <input type="text" name="captcha" placeholder="Капча" required="required">
+                    </label>
+                    <br>
+                    <div class="col-md-12">
+                      <button class="reg-form-but" type="submit" name="btn_submit_register">Зарегистрироваться</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary justify-content-center" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -79,16 +161,144 @@
     </div>
   </header>
 
-  <main>
-
+  <main class="block-1" id="about">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="col title">
+            <p>Smart automation of routine actions in Instagram for successful and controlled growth your account</p>
+            <hr>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="about-block1">
+                <h4>Automate all actions in Instagram</h4>
+                  <ul>
+                    <li>Liking</li>
+                    <li>Following</li>
+                    <li>Commenting</li>
+                    <li>Sending Direct Message</li>
+                  </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="about-block2">
+                <h4>Automate safely your account by using</h4>
+                <ul>
+                  <li>Our limit tool for actions</li>
+                  <li>Recommended and set by default limits</li>
+                  <li>Statistics and logging service</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="about-block3">
+                <h4>Automate your Instagram account</h4>
+                <ul>
+                  <li>NOW free for one account</li>
+                  <li>NOW free one proxy for one account</li>
+                  <li>Commenting</li>
+                  <li>NOW free all available actions for one account</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-12 justify-content-center">
+              <div class="col-md-12" style="display: flex; justify-content: center;">
+                <p>1 ACCOUNT 1 PROXY and ALL ACTIONS in OUR SERVICE for FREE Automate now</p>
+              </div>
+              <div class="col-md-12" style="display: flex; justify-content: center;">
+                <a id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><button data-toggle="modal" data-target="#myModal">Automate now</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <footer>
+  <main class="block-2" id="howworking">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="col title">
+            <p>How can I start?</p>
+          </div>
+          <div class="row">
 
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
+  <main class="block-3" id="reg">
+    <div class="container-fluid">
+      <div class="row" style="justify-content: center;">
+        <div class="col-md-6">
+          <div class="col title">
+            <p>Регистрация</p>
+          </div>
+          <form class="form-reg row" action="register.php" method="post" name="form_reg">
+            <label class="col-md-6">
+              <input type="text" name="first_name" required="required" placeholder="Имя">
+            </label>
+            <br>
+              <label class="col-md-6">
+                <input id="email" type="email" name="email" required="required" placeholder="Email">
+                <span id="valid_email_message" class="mesage_error"></span>
+              </label>
+            <br>
+              <label class="col-md-6">
+                <input type="password" name="password" placeholder="Пароль" required="required"><br>
+                <span id="valid_password_message" class="mesage_error"></span>
+              </label>
+            <br>
+              <label class="col-md-6">
+                <input type="password" name="password2" placeholder="Пароль еще раз" required="required"><br>
+                <span id="valid_password_message" class="mesage_error"></span>
+              </label>
+            <br>
+              <label class="col-md-12">
+                <!--<img src="captcha.php" alt="Капча" /> <br><br>-->
+                <input type="text" name="captcha" placeholder="Капча" required="required">
+              </label>
+            <br>
+              <div class="col-md-12">
+                <button class="reg-form-but" type="submit" name="btn_submit_register">Зарегистрироваться</button>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12" style="display: flex">
+          <div class="col-md-4" style="display: flex;justify-content: center;">
+            <div class="logo-head">
+              Folloflow
+            </div>
+          </div>
+          <div class="col-md-4" style="display: flex;justify-content: center;">
+            <div class="feed-back">
+              feedback@folloflow.com
+            </div>
+          </div>
+          <div class="col-md-4" style="display: flex; justify-content: center;">
+            <div class="soc-net">
+              <a href=""><i class="fa fa-vk" aria-hidden="true"></i> VK</a>
+              <a href=""><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
+              <a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i> FaceBook</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
+
   <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
   <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
   <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
