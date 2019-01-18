@@ -205,7 +205,7 @@ button:focus {
 .sign-in button {
   background: #8cb3c6;
   border: 8px solid #8cb3c6;
-  border-radius: 4px;
+  border-radius: 25px;
   cursor: pointer;
   color: #fff;
   font-size: 18px;
@@ -216,7 +216,7 @@ button:focus {
   -moz-transition-property: background, border-color, color, box-shadow;
   transition-duration: 1s, 1s, 1s, 1s;
   transition-property: background, border-color, color, box-shadow;
-  width: -webkit-fill-available;
+  width: 150px;
 }
 
 .sign-in button:hover{
@@ -234,7 +234,7 @@ button:focus {
 .registration button {
   background: #8cb3c6;
   border: 8px solid #8cb3c6;
-  border-radius: 4px;
+  border-radius: 25px;
   cursor: pointer;
   color: #fff;
   font-size: 18px;
@@ -246,6 +246,7 @@ button:focus {
   transition-duration: 1s, 1s, 1s, 1s;
   transition-property: background, border-color, color, box-shadow;
   width: -webkit-fill-available;
+  width: 150px;
 }
 
 .registration button:hover{
@@ -288,9 +289,9 @@ button:focus {
 }
 
 .block-1 button:hover {
-  background: #cc8250;
+  background: #CC8250;
   border: 10px solid #CC8250;
-  box-shadow: 0 0 60px rgb(185, 185, 185);
+  box-shadow: 0 0 40px rgb(160, 160, 160);
 }
 
 .block-1 p,
@@ -314,7 +315,7 @@ button:focus {
   display: flex;
   justify-content: center;
   font-size: 22px;
-  margin-top: 100px;
+  margin-top: 90px;
   margin-bottom: 70px;
   color: #8cb3c6;
 }
@@ -441,6 +442,91 @@ hr {
   background-image: -ms-linear-gradient(left, #fff, #000, #fff);
   background-image: -o-linear-gradient(left, #fff, #000, #fff);
 }
+
+/*bar*/
+.progressbar li.no-active {
+
+}
+.progressbar li.no-active:before {
+
+}
+.progressbar li.no-active + li:after {
+
+}
+#top {display:none;position:fixed;right:1%;bottom:16px;height:16px;width:48px;height:48px;background:#ff0000;}
+.hidden{
+  opacity:0;
+}
+.visible{
+  opacity:1;
+}
+
+.container-bar {
+  width: 100%;
+}
+
+.progressbar {
+  counter-reset: step;
+}
+.progressbar li {
+  list-style: none;
+  display: inline-block;
+  width: 24.33%;
+  position: relative;
+  text-align: center;
+  cursor: auto;
+  z-index: 2;
+}
+.progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 50px;
+  height: 50px;
+  line-height : 44px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  display: block;
+  text-align: center;
+  margin: -8px auto 6px 114px;
+  background-color: #5caf5c;
+  z-index: 1;
+  box-shadow: 0 0 50px #b1b1b1;
+  color: white;
+}
+.progressbar li:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  top: 15px;
+  left: -50%;
+  z-index: -1;
+}
+.progressbar li:first-child:after {
+  content: none;
+}
+.progressbar li.active-in {
+  color: #5caf5c;
+}
+.progressbar li.active-in:before {
+  border-color: #5caf5c;
+}
+.progressbar li.active-in + li:after {
+  background-color: #5caf5c;
+}
+
+.block-2 p{
+  padding: 0 20px 20px 20px;
+  color: #696969;
+}
+.block-2 h3{
+  padding: 0 20px 20px 50px;
+  color: #696969;
+  text-align: center;
+}
+
+/*bar*/
 
 .text-in {
   padding-right: 5px;
