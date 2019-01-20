@@ -127,36 +127,37 @@ button:focus {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 420px;
-  background: linear-gradient(271deg, #ff1311, #cb0be8, #471fff, #117ce8, #20ffd7);
-  background-size: 1000% 1000%;
-  -webkit-animation: back-gr 57s ease infinite;
-  -moz-animation: back-gr 57s ease infinite;
-  -o-animation: back-gr 57s ease infinite;
-  animation: back-gr 57s ease infinite;
+  height: 600px;
+  /* background-size: 240px 210px, auto, 150px; */
+  background: linear-gradient( rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.68) ), url(https://www.mantralabsglobal.com/wp-content/uploads/2016/02/web-development-blog-1.png) 68% 70% no-repeat #8cb3c6;
+  /* background-size: 150% 150%; */
+  /* -webkit-animation: back-gr 57s ease infinite; */
+  /* -moz-animation: back-gr 57s ease infinite; */
+  /* -o-animation: back-gr 57s ease infinite; */
+  /* animation: back-gr 57s ease infinite; */
 }
 
-@-webkit-keyframes back-gr {
-  0%{background-position:0% 50%}
-  25%{background-position:85% 25%}
-  50%{background-position:100% 50%}
-  75%{background-position:85% 75%}
-  100%{background-position:0% 50%}
-}
-@-moz-keyframes back-gr {
-  0%{background-position:0% 50%}
-  25%{background-position:85% 25%}
-  50%{background-position:100% 50%}
-  75%{background-position:85% 75%}
-  100%{background-position:0% 50%}
-}
-@keyframes back-gr {
-  0%{background-position:0% 50%}
-  25%{background-position:85% 25%}
-  50%{background-position:100% 50%}
-  75%{background-position:85% 75%}
-  100%{background-position:0% 50%}
-}
+/*@-webkit-keyframes back-gr {*/
+  /*0%{background-position:0% 50%}*/
+  /*25%{background-position:85% 25%}*/
+  /*50%{background-position:100% 50%}*/
+  /*75%{background-position:85% 75%}*/
+  /*100%{background-position:0% 50%}*/
+/*}*/
+/*@-moz-keyframes back-gr {*/
+  /*0%{background-position:0% 50%}*/
+  /*25%{background-position:85% 25%}*/
+  /*50%{background-position:100% 50%}*/
+  /*75%{background-position:85% 75%}*/
+  /*100%{background-position:0% 50%}*/
+/*}*/
+/*@keyframes back-gr {*/
+  /*0%{background-position:0% 50%}*/
+  /*25%{background-position:85% 25%}*/
+  /*50%{background-position:100% 50%}*/
+  /*75%{background-position:85% 75%}*/
+  /*100%{background-position:0% 50%}*/
+/*}*/
 
 .header-card-logo {
   display: flex;
@@ -166,16 +167,16 @@ button:focus {
 
 .navbar-dark .navbar-nav .nav-link {
   color: #312c32;
-  padding: 15px;
-  border-bottom: 3px #fff solid;
+  padding: 25px;
+  border-bottom: 1px #fff solid;
 }
 .navbar-dark .navbar-nav .nav-link:hover{
   color: #daad86;
-  border-bottom: 3px #daad86 solid;
+  border-bottom: 1px #daad86 solid;
 }
 .navbar-dark .navbar-nav .nav-link.active {
   color: #daad86;
-  border-bottom: 3px #daad86 solid;
+  border-bottom: 1px #daad86 solid;
 }
 
 .nav .item-head {
@@ -185,8 +186,9 @@ button:focus {
 .header-card-logo a {
   display: flex;
   color: #fff;
-  font-size: 70px;
+  font-size: 40px;
   text-decoration: none;
+  text-align: center;
 }
 
 .header-card-logo p {
@@ -232,28 +234,32 @@ button:focus {
 }
 
 .registration button {
-  background: #8cb3c6;
-  border: 8px solid #8cb3c6;
-  border-radius: 25px;
+  background: #ffffff;
+  border: 8px solid #ffffff;
+  border-radius: 6px;
   cursor: pointer;
-  color: #fff;
-  font-size: 18px;
+  color: #909090;
+  font-size: 25px;
   text-transform: uppercase;
-  -webkit-transition-duration: 1s, 1s, 1s, 1s;
-  -webkit-transition-property: background, border-color, color, box-shadow;
-  -moz-transition-duration: 1s, 1s, 1s, 1s;
-  -moz-transition-property: background, border-color, color, box-shadow;
-  transition-duration: 1s, 1s, 1s, 1s;
-  transition-property: background, border-color, color, box-shadow;
+  -webkit-transition-duration: 0.5s, 0.5s, 0.5s, 0.5s, 0.5s, 0.5s;
+  -webkit-transition-property: background, border-color, color, box-shadow, width, height;
+  -moz-transition-duration: 0.5s, 0.5s, 0.5s, 0.5s, 0.5s, 0.5s;
+  -moz-transition-property: background, border-color, color, box-shadow, width, height;
+  transition-duration: 0.5s, 0.5s, 0.5s, 0.5s, 0.5s, 0.5s;
+  transition-property: background, border-color, color, box-shadow, width, height;
   width: -webkit-fill-available;
-  width: 150px;
+  width: 200px;
+  height: 65px;
+  box-shadow: 12px 20px 35px rgb(120, 120, 120);
 }
 
 .registration button:hover{
-  background: #daad86;
-  border-color: #daad86;
-  color: white;
-  box-shadow: 0px 0px 30px rgba(141, 141, 141);
+  background: #00f7f7;
+  border-color: #00f7f7;
+  color: #909090;
+  box-shadow: 5px 10px 15px rgb(120, 120, 120);
+  width: 192px;
+  height: 65px;
 }
 
 .soc-net {
