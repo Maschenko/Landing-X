@@ -420,25 +420,38 @@ button:focus {
 .about-block1,
 .about-block2,
 .about-block3{
-  height: 370px;
+  height: 385px;
   padding: 30px;
-  -webkit-transition-duration: 0.5s;
-  -webkit-transition-property: box-shadow;
-  -moz-transition-duration: 0.5s;
-  -moz-transition-property: box-shadow;
-  transition-duration: 0.5s;
-  transition-property: box-shadow;
   color: #5e5e5e;
+  border-radius: 15px;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out; /** Chrome & Safari **/
+  -moz-transition: all 0.5s ease-in-out; /** Firefox **/
+  -o-transition: all 0.5s ease-in-out; /** Opera **/
+
+}
+
+.about-block1:hover,
+.about-block2:hover,
+.about-block3:hover{
+  box-shadow: 0 0 80px rgb(213, 213, 213);
+  transform: translate(0,-35px);
+  -webkit-transform: translate(0,-35px);
+  -o-transform: translate(0,-35px);
+  -moz-transform: translate(0,-35px);
 }
 
 .about-block1 h4 {
   color: #000000;
+  text-align: center;
 }
 .about-block2 h4 {
   color: #000000;
+  text-align: center;
 }
 .about-block3 h4 {
   color: #000000;
+  text-align: center;
 }.about-block1 p {
   color: #6bda7e;
 }
@@ -447,12 +460,6 @@ button:focus {
 }
 .about-block3 p {
   color: #6bda7e;
-}
-
-.about-block1:hover,
-.about-block2:hover,
-.about-block3:hover{
-  box-shadow: 0 0 80px rgb(213, 213, 213);
 }
 
 hr {
