@@ -104,7 +104,8 @@ button:focus {
 
 #header {
   background: #feffff;
-  padding: 0px;
+  padding: 0;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
 }
 
 #header .logo-head a {
@@ -281,7 +282,7 @@ button:focus {
 
 .block-1 {
   width: 100%;
-  height: 830px;
+  height: 855px;
   background: #fff;
 }
 
@@ -312,7 +313,7 @@ button:focus {
 
 .block-1-facts {
   width: 100%;
-  height: 600px;
+  height: 518px;
   background: linear-gradient( rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.85) ), url(http://www.ipcenter.uz/images/66.png) no-repeat center fixed;  color: #fff;
   background-size: cover;
 }
@@ -338,14 +339,39 @@ button:focus {
 
 .block-2 {
   width: 100%;
-  height: 670px;
+  height: 700px;
   background: #fafafa;
 }
 
 .block-3 {
   width: 100%;
   height: 600px;
-  background: #fff;
+  background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75) ), url(https://www.buro247.ru/local/images/buro/coco-cinema-1--medium-size_jpg_1350286257.jpg) no-repeat center fixed;
+  color: #fff;
+  background-size: cover;
+}
+
+.block-1 .title {
+  display: flex;
+  justify-content: center;
+  font-size: 26px;
+  margin-top: 90px;
+  margin-bottom: 70px;
+  color: #adadad;
+}.block-2 .title {
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+  margin-top: 90px;
+  margin-bottom: 70px;
+  color: #adadad;
+}.block-3 .title {
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+  margin-top: 90px;
+  margin-bottom: 70px;
+  color: #f7f7f7;
 }
 
 .title {
@@ -401,7 +427,7 @@ button:focus {
 .form-reg-modal {
   padding: 18px;
   background: white;
-  height: 430px;
+  height: 250px;
   -webkit-transition-duration: 0.5s;
   -webkit-transition-property: box-shadow;
   -moz-transition-duration: 0.5s;
@@ -415,32 +441,47 @@ button:focus {
 }
 
 .form-reg-modal button {
-  background: #8cb3c6;
-  border: 5px #8cb3c6 solid;
+  background: #cc7d38;
+  border: 0 solid;
   color: white;
-  width: 100%;
+  width: 235px;
   height: auto;
+  padding: 14px;
+}
+
+.tab-pane button {
+  background: #cc7d38;
+  border: 0 solid;
+  color: white;
+  width: 235px;
+  height: auto;
+  padding: 14px;
 }
 
 .form-reg-modal input {
   width: 100%;
-  border: 0;
-  border-bottom: 2px rgba(152, 218, 252, 0.51) solid;
-  padding: 5px;
+  border: 1px rgb(232, 225, 218) solid;
+  padding: 5px 5px 5px 12px;
   color: #5e5e5e;
+  border-radius: 5px;
 }
 
 .form-reg-modal input:active,
 .form-reg-modal input:focus{
-  border-bottom: 2px #98dafc solid;
+  border: 1px rgb(204, 125, 56) solid;
 }
 
 .form-login input {
   width: 100%;
-  border: 0;
-  border-bottom: 2px rgba(152, 218, 252, 0.51) solid;
-  padding: 5px;
+  border: 1px rgb(232, 225, 218) solid;
+  padding: 5px 5px 5px 12px;
   color: #5e5e5e;
+  border-radius: 5px;
+}
+
+.form-login input:active,
+.form-login input:focus{
+  border: 1px rgb(204, 125, 56) solid;
 }
 
 .about-block1,
@@ -572,7 +613,6 @@ hr {
 
 .block-2 p{
   padding: 0 20px 20px 20px;
-  color: #696969;
 }
 .block-2 h5{
   padding: 0 20px 20px 20px;
@@ -589,8 +629,8 @@ hr {
 .footer {
   color: #fff;
   width: 100%;
-  height: 300px;
-  background: #312c32;
+  height: 252px;
+  background: #cc7d38;
 }
 
 .footer .logo-head {
@@ -606,15 +646,15 @@ hr {
 }
 
 .footer .soc-net a {
-  -webkit-transition-duration: 1s;
+  -webkit-transition-duration: 0.5s;
   -webkit-transition-property: color;
-  -moz-transition-duration: 1s;
+  -moz-transition-duration: 0.5s;
   -moz-transition-property: color;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   transition-property: color;
 }
 .footer .soc-net a:hover {
-  color: #6c757d;
+  color: #dcad86;
 }
 
 .img-block {
@@ -671,13 +711,13 @@ hr {
 .block-3 button:hover {
   background: #CC8250;
   border: 10px solid #CC8250;
-  box-shadow: 0 0 40px rgb(160, 160, 160);
+  box-shadow: 0 0 40px rgb(0, 0, 0);
 }
 .block-3 .row .text-p p {
   justify-content: center;
   display: flex;
   font-size: 45px;
-  color: #888;
+  color: #fff;
 }
 
 .block-3 .row a {
