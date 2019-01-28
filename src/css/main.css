@@ -116,7 +116,7 @@ button:focus {
 }
 
 #header .logo-head strong {
-  color: #FB9039;
+  color: #1089f9;
 }
 
 .nav-item-head {
@@ -165,17 +165,17 @@ button:focus {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: #312c32;
+  color: #7a7b83;
   padding: 25px;
   border-bottom: 1px #fff solid;
 }
 .navbar-dark .navbar-nav .nav-link:hover{
-  color: #daad86;
-  border-bottom: 1px #daad86 solid;
+  color: #40434e;
+  border-bottom: 1px #40434e solid;
 }
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #daad86;
-  border-bottom: 1px #daad86 solid;
+  color: #40434e;
+  border-bottom: 1px #40434e solid;
 }
 
 .nav .item-head {
@@ -285,11 +285,13 @@ button:focus {
 }
 
 .block-1 button {
-  background: #cc7d38;
-  border: 10px solid #cc7d38;
+  background: #0c9cf9;
+  border: 0 solid;
+  padding: 10px;
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
+  box-shadow: 0 8px 15px rgb(205, 205, 205);
   -webkit-transition-duration: 0.5s, 0.5s, 0.5s;
   -webkit-transition-property: background, border, box-shadow;
   -moz-transition-duration: 0.5s, 0.5s, 0.5s;
@@ -299,9 +301,10 @@ button:focus {
 }
 
 .block-1 button:hover {
-  background: #CC8250;
-  border: 10px solid #CC8250;
-  box-shadow: 0 0 40px rgb(160, 160, 160);
+  background: #0c9cf9;
+  border: 0 solid;
+  padding: 10px;
+  box-shadow: 0 12px 32px rgb(205, 205, 205);
 }
 
 .block-1 p:nth-child(1) {
@@ -517,7 +520,7 @@ button:focus {
 .about-block1,
 .about-block2,
 .about-block3{
-  height: 385px;
+  height: 380px;
   padding: 30px;
   color: #5e5e5e;
   border-radius: 15px;
@@ -673,7 +676,7 @@ hr {
   color: #fff;
   width: 100%;
   height: 252px;
-  background: #1F3044;
+  background: #1a1b1e;
 }
 
 .footer .logo-head {
@@ -697,7 +700,7 @@ hr {
   transition-property: color;
 }
 .footer .soc-net a:hover {
-  color: #4e77a7;
+  color: #7e7b83;
 }
 
 .img-block {
@@ -738,7 +741,7 @@ hr {
 }
 
 .block-3 button {
-  background: #FB9039;
+  background: #0c9cf9;
   padding: 16px;
   border: 0 solid;
   border-radius: 4px;
@@ -753,7 +756,7 @@ hr {
 }
 
 .block-3 button:hover {
-  background: #da7c2f;
+  background: #0c9cf9;
   box-shadow: 0 0 40px rgb(0, 0, 0);
 }
 .block-3 .row .text-p p {
