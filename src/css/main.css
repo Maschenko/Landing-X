@@ -90,9 +90,63 @@ textarea {
    Author's custom styles
    ========================================================================== */
 body {
-  padding-top: 56px;
   font-family: 'Quicksand', sans-serif;
   scroll-behavior: smooth;
+  display: table;
+  margin: 0;
+  padding: 56px 0 0 0;
+}
+.mobile-menu {
+  display: none;
+}
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  body {
+    padding: 0;
+  }
+  .row {
+     margin-right: 0px;
+     margin-left: 0px;
+  }
+  #header {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+    width: 100%;
+  }
+  .bg-mobile-menu {
+    background: #40434e;
+    padding: 40px 0px;
+  }
+  .bg-mobile-menu p {
+    font-size: 16px;
+  }
+  .navbar-nav {
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav .item-head {
+    font-size: 42px;
+  }
+  .position-mobile-menu{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  .logo-mobile-menu {
+    display: flex;
+    align-items: center;
+  }
+  .button-mobile-menu {
+
+  }
+  a {
+    color: #fff;
+  }
 }
 
 input:focus,
