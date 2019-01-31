@@ -12,6 +12,7 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    overflow-x: hidden;
 }
 
 /*
@@ -95,19 +96,22 @@ body {
   display: table;
   margin: 0;
   padding: 56px 0 0 0;
+  overflow-x: hidden;
 }
+/*MOBILE VERSION*/
 .mobile-menu {
   display: none;
 }
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   body {
     padding: 0;
   }
+  header {
+
+  }
   .row {
-     margin-right: 0px;
-     margin-left: 0px;
+     margin-right: 0;
+     margin-left: 0;
   }
   #header {
     display: none;
@@ -115,10 +119,13 @@ and (max-device-width : 480px) {
   .mobile-menu {
     display: block;
     width: 100%;
+    position: fixed;
+    z-index: 1000;
+    background: #fff;
   }
   .bg-mobile-menu {
     background: #40434e;
-    padding: 40px 0px;
+    padding: 8px 0;
   }
   .bg-mobile-menu p {
     font-size: 16px;
@@ -135,7 +142,6 @@ and (max-device-width : 480px) {
   .position-mobile-menu{
     display: flex;
     justify-content: center;
-    padding: 20px;
   }
   .logo-mobile-menu {
     display: flex;
@@ -147,7 +153,157 @@ and (max-device-width : 480px) {
   a {
     color: #fff;
   }
+  .container-fluid {
+     width: 0;
+     padding-right: 0;
+     padding-left: 0;
+     margin-right: 0;
+     margin-left: 0;
+  }
+  .header-card-logo .col-md-12:nth-child(2) {
+    display: none;
+  }
+  .header-card-logo a {
+    font-size: 38px !important;
+  }
+  .registration button {
+    font-size: 35px !important;
+    width: 188px !important;
+    height: 70px !important;
+  }
+  .block-1 {
+    height: auto !important;
+  }
+  .block-1 .title {
+    text-align: center;
+    font-size: 24px !important;
+  }
+  .block-1 .cent {
+    font-size: 110px !important;
+  }
+  .block-1 .title p:nth-child(1) {
+    color: #40434e !important;
+  }.block-1 .title p:nth-child(2) {
+    font-size: 20px;
+    color: #0c9cf9 !important;
+  }
+  .about-block1, .about-block2, .about-block3 {
+    font-size: 20px;
+  }.about-block1 h5, .about-block2 h5, .about-block3 h5 {
+    font-size: 30px;
+  }
+  .about-block1, .about-block2, .about-block3 {
+    height: max-content !important;
+  }
+  .one-about {
+    font-size: 20px !important;
+  }
+  .one-about b {
+    font-size: 28px !important;
+    margin: 0 12px 0 0 !important;
+  }
+  .one-about strong {
+    color: #404359;
+    align-items: normal;
+    display: block;
+  }
+  .about-button {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 100px 0;
+    font-size: 25px;
+  }
+  /*End-block-1*/
+  .block-1-facts {
+    height: auto !important;
+  }
+  .block-1-facts .title {
+    font-size: 70px;
+  }
+  .block-1-facts p:nth-child(1) {
+    font-size: 32px !important;
+
+  }
+  .block-1-facts p:nth-child(2) {
+    font-size: 15px !important;
+  }
+  .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    /*padding-right: 0 !important;*/
+    /*padding-left: 0 !important;*/
+  }
+  .info h5 {
+    font-size: 22px;
+    padding: 2%;
+  }
+  .info-alight {
+    display: flex;
+    justify-content: end;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .info-alight-margin {
+    margin-left: 0 !important;
+  }
+  .info-text-1 {
+    margin-left: 0 !important;
+    max-width: 500px !important;
+    font-size: 19px;
+    margin-top: 0 !important;
+  }.info-text-2 {
+   margin-left: 0 !important;
+   max-width: 500px !important;
+   font-size: 19px;
+   margin-top: 0 !important;
+  }
+  .block-2 {
+    height: auto;
+  }
+  .rss {
+    display: contents;
+    flex-wrap: wrap;
+  }
+  .block-2 {
+    height: auto !important;
+  }
+  .container-bar {
+    display: none;
+  }
+  .block-2 p {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #40434e;
+    padding: 0 !important;
+  }
+  .block-3 .row .text-p p {
+    text-align: center;
+    font-size: 30px !important;
+  }
+  .block-3 {
+    height: 620px !important;
+  }
+  .block-3 button {
+    font-size: 15px;
+  }
+  .footer {
+    display: none;
+  }
+  .mobile-footer {
+    display: block !important;
+    height: 200px;
+    background: #1a1b1e;
+  }
+  .mobile-footer li {
+    padding-top: 10px;
+    text-align: center;
+    list-style-type: none;
+  }.mobile-footer li:first-of-type {
+    padding-top: 10px;
+  }.mobile-footer li:last-child {
+    padding-top: 10px;
+  }
 }
+/*END MOBILE VERSION*/
 
 input:focus,
 select:focus,
@@ -360,11 +516,11 @@ button:focus {
    justify-content: center;
    display: flex;
 }.block-1-facts p:nth-child(1) {
-  margin-top: 36px;
+  margin-top: 32px;
   justify-content: center;
   display: flex;
 }.block-1-facts p:nth-child(2) {
-  font-size: 16px;
+  font-size: 14px;
    justify-content: center;
    display: flex;
 }.info-text-1 {
@@ -373,11 +529,13 @@ button:focus {
   display: flex;
   max-width: 406px;
   margin-left: 18%;
+  text-align: justify;
 }.info-text-2 {
    margin-top: 36px;
    justify-content: center;
    display: flex;
    max-width: 406px;
+   text-align: justify;
 }
 
 .block-1 a {
@@ -836,7 +994,44 @@ hr {
   -webkit-border-radius: 5px;
 }
 
+.one-about {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+}
 
+.one-about strong {
+  color: #404359;
+  align-items: normal;
+  display: block;
+}
+
+.one-about b {
+  color: #0c9cf9;
+  font-size: 40px;
+  margin: 0 8px 0 8px;
+}
+
+.about-button {
+  display: flex;
+  justify-content: center;
+}
+
+.info-alight {
+  display: flex;
+  justify-content: end;
+}
+.info-alight-margin {
+  margin-left: 8%;
+}
+
+.rss {
+  display: flex;
+}
+
+.mobile-footer {
+  display: none;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
