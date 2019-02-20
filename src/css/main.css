@@ -551,8 +551,9 @@ button:focus {
 .block-1-facts {
   width: 100%;
   height: auto;
-  background: linear-gradient( rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.85) ), url(http://www.ipcenter.uz/images/66.png) no-repeat center fixed;  color: #fff;
+  background: linear-gradient( rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.55) ), url(https://wallpapercave.com/wp/wp2821583.jpg) no-repeat center fixed;  color: #fff;
   background-size: cover;
+  transform: translateZ(-1px) scale(1.2);
 }
 .block-1-facts img {
   filter: invert(1);
@@ -563,7 +564,7 @@ button:focus {
   justify-content: center;
   font-size: 32px;
   margin-top: 90px;
-  margin-bottom: 70px;
+  margin-bottom: 0;
   color: #fff;
 }
 
@@ -589,16 +590,83 @@ button:focus {
 
 .block-2 {
   width: 100%;
-  height: 700px;
+  height: 810px;
   background: #fff;
 }
 
 .block-3 {
   width: 100%;
-  height: 600px;
-  background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75) ), url(https://www.buro247.ru/local/images/buro/coco-cinema-1--medium-size_jpg_1350286257.jpg) no-repeat center fixed;
+  height: auto;
+  background: linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75) ), url(https://images.unsplash.com/photo-1522482178516-7a04ae0dce7a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e8df38f27be5905834e46811756783e2&) no-repeat center fixed;
   color: #fff;
   background-size: cover;
+  transform: translateZ(-1px) scale(1.2);
+}
+
+.wrapper {
+  /* The height needs to be set to a fixed value for the effect to work.
+   * 100vh is the full height of the viewport. */
+  height: 100vh;
+  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+  overflow-x: hidden;
+  /* Enable scrolling on the page. */
+  overflow-y: auto;
+  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+  perspective: 2px;
+}
+
+.section {
+  /* Needed for children to be absolutely positioned relative to the parent. */
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+  height: 100vh;
+
+  /* For text formatting. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+}
+
+.parallax::after {
+  /* Display and position the pseudo-element */
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  transform: translateZ(-1px) scale(1.5);
+  /* Force the background image to fill the whole element. */
+  background-size: 100%;
+  /* Keep the image from overlapping sibling elements. */
+  z-index: -1;
+}
+
+/* The styling for the static div. */
+.static {
+  background: red;
+}
+
+/* Sets the actual background images to adorable kitties. This part is crucial. */
+.bg1::after {
+  background-image: url('https://www.buro247.ru/local/images/buro/coco-cinema-1--medium-size_jpg_1350286257.jpg');
+}
+
+.bg2::after {
+  background-image: url('https://placekitten.com/g/800/600');
+}
+
+.paRbox {
+  height: auto;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .block-1 .title {
@@ -612,7 +680,7 @@ button:focus {
   display: flex;
   justify-content: center;
   font-size: 32px;
-  margin-top: 90px;
+  margin-top: 155px;
   margin-bottom: 70px;
   color: #adadad;
 }.block-3 .title {
@@ -903,7 +971,7 @@ hr {
 .footer {
   color: #fff;
   width: 100%;
-  height: 252px;
+  height: 200px;
   background: #1a1b1e;
 }
 
@@ -981,6 +1049,8 @@ hr {
   -moz-transition-property: background, box-shadow;
   transition-duration: 0.5s, 0.5s, 0.5s;
   transition-property: background, box-shadow;
+  margin: 80px 0 110px;
+  font-size: 12px;
 }
 
 .block-3 button:hover {
@@ -990,7 +1060,7 @@ hr {
 .block-3 .row .text-p p {
   justify-content: center;
   display: flex;
-  font-size: 45px;
+  font-size: 26px;
   color: #fff;
 }
 
@@ -1041,6 +1111,7 @@ hr {
 
 .rss {
   display: flex;
+  transform: translateZ(0px) scale(0.8);
 }
 
 .mobile-footer {
